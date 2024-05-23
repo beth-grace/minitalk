@@ -6,23 +6,29 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:12:42 by bmilford          #+#    #+#             */
-/*   Updated: 2024/05/22 18:39:35 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:14:24 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 #include <signal.h>
 
-int main();
-{
-	int	myserver;
+void	sig_handler(int sig);
 
-	myserver == SIGUSR1;
-	printf("%d",getpid());
+int main()
+{
+	ft_printf("%d\n",getpid());
 
 	signal(SIGUSR1, sig_handler);
+	signal(SIGUSR2, sig_handler);
+	while (1)
+		pause();
 }
 
 void	sig_handler(int sig)
 {
+	if (sig == SIGUSR1)
+		ft_printf("RECIEVED SIGUSR1\n");
+	else
+		ft_printf("RECIEVED SIGUSR2\n");
 }
