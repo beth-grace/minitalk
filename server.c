@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:12:42 by bmilford          #+#    #+#             */
-/*   Updated: 2024/05/23 21:59:20 by beefie           ###   ########.fr       */
+/*   Updated: 2024/05/24 17:16:46 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,19 @@ int main()
 
 void	sig_handler(int sig)
 {
-	//if (sig == SIGUSR1)
-	//	ft_printf("RECIEVED SIGUSR1\n");
-	//else
-	//	ft_printf("RECIEVED SIGUSR2\n");
-	int	size;
-	char	*str;
+	static int	bit = 8;
+	static char	byte = 0;
 
-	while (1)
+	byte = byte << 1;
+	if (sig == SIGUSR1)
+		byte += 0;
+	else
+		byte += 1;
+	bit--;
+	if (bit == 0)
 	{
-		bit = 7;
-		str = 0; 
-		while (bit >= 0)
-		{
-			if (sig == SIGUSR1)
-				str << bit == 0;
-			else
-				str << bit == 1;
-			bit--;
-
-		}
-		ft_printf(str);
+		ft_putchar_fd(1, byte);
+		byte = 0;
+		bit = 8;
 	}
 }
