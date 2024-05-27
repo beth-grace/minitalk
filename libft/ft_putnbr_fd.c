@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:18:27 by bmilford          #+#    #+#             */
-/*   Updated: 2024/04/24 16:52:28 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:45:58 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	ft_putnbr_fd(int n, int fd)
 	return (t);
 }
 /*
-int main()
 {
 	ft_putnbr_fd( -1,1);
 	ft_putnbr_fd( 0,1);

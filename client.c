@@ -6,14 +6,14 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:12:51 by bmilford          #+#    #+#             */
-/*   Updated: 2024/05/27 18:07:36 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:49:08 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <signal.h>
 
-int main(int argc, char* argv[])
+int	main(int argc, char *argv[])
 {
 	char	*str;
 	int		pid;

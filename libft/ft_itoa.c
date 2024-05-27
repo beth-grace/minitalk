@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:22:59 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/19 12:01:07 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:45:46 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ char	*ft_itoa(int n)
 }
 
 /*
-int main()
 {
 	ft_putstr_fd(ft_itoa(INT_MAX), 1);
 	ft_putchar_fd('\n', 1);

@@ -6,22 +6,18 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:12:42 by bmilford          #+#    #+#             */
-/*   Updated: 2024/05/27 18:02:25 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:47:18 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <signal.h>
 
-
-#include <stdio.h>
-
 void	sig_handler(int sig);
 
-int main()
+int	main(void)
 {
 	ft_printf("%d\n", getpid());
-
 	signal(SIGUSR1, sig_handler);
 	signal(SIGUSR2, sig_handler);
 	while (1)
