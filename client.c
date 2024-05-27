@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:12:51 by bmilford          #+#    #+#             */
-/*   Updated: 2024/05/23 18:18:43 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:07:36 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int main(int argc, char* argv[])
 		str = argv[2];
 		while (*str)
 		{
-			bit = 0;
-			while (bit < 8)
+			bit = 7;
+			while (bit >= 0)
 			{
 				if ((*str >> bit) % 2 == 1)
 					kill(pid, SIGUSR2);
 				else
 					kill(pid, SIGUSR1);
-				bit++;
+				bit--;
 				usleep(100);
 			}
 			str++;
@@ -41,4 +41,3 @@ int main(int argc, char* argv[])
 	else
 		ft_printf("ERROR, NOT ENOUGH ARGUEMENTS \n");
 }
-
